@@ -7,8 +7,8 @@ import 'IndividualResult.dart';
 import 'QuestionModel.dart';
 import 'Questions.dart';
 
-class QeustionsPage extends StatelessWidget {
-  const QeustionsPage({Key? key}) : super(key: key);
+class QeustionsLeadersPage extends StatelessWidget {
+  const QeustionsLeadersPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class QeustionsPage extends StatelessWidget {
       title: "Qestions Page",
       home: Scaffold(
         appBar: null,
-        body: _QeustionsPage(),
+        body: _QeustionsLeadersPage(),
       ),
     );
   }
@@ -28,14 +28,14 @@ List<QuestionModel>? dataList = [];
 
 enum ANo { a1, a2, a3, a4, a5 }
 
-class _QeustionsPage extends StatefulWidget {
-  const _QeustionsPage({Key? key}) : super(key: key);
+class _QeustionsLeadersPage extends StatefulWidget {
+  const _QeustionsLeadersPage({Key? key}) : super(key: key);
 
   @override
-  State<_QeustionsPage> createState() => __QeustionsPageState();
+  State<_QeustionsLeadersPage> createState() => __QeustionsLeadersPageState();
 }
 
-class __QeustionsPageState extends State<_QeustionsPage> {
+class __QeustionsLeadersPageState extends State<_QeustionsLeadersPage> {
   int counter = 0;
 
   String theQ = questionsListT1[0].question;
