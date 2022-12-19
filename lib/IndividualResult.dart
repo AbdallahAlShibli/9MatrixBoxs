@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 import 'GradientButtonFb1.dart';
-import 'QeustionsPage.dart';
+import 'QeustionsPageIndividual.dart';
 import 'QuestionModel.dart';
 import 'main.dart';
 

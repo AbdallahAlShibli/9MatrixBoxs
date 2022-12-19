@@ -38,4 +38,8 @@ List<ResultsInfoT1> resultData = [
       "Average Performer",
       "Medium Performance - Low Potential: The employee is doing an average job where he/she might need some time to adjust to the environment. The employee doesn't have the capabilities to move up or to grow in the organization.",
       "-Provide a clear development plan to the employee. \n-Have periodic meetings with him/her and assess their performance. \n-Offer coaching if required."),
+  ResultsInfoT1(
+      "Risk",
+      "Low Performance - Low Potential: The employee could be a wrong hire. He/She doesn't fit in the department, and it is difficult to depend on the employee for the tasks and activities.",
+      "-Have a 1-to-1 meeting and understand if the employee has issues that are stopping him/her from performing. \n-Prepare an exit plan for the employee if he has a bad influence on the department and the team.\n-Provide a second chance, if you think the employee will do better in a different place.\n-Don't invest in development for the employee; it's not recommended."),
 ];

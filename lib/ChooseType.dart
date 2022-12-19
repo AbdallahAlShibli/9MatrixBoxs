@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:matrix9/GradientButtonFb1.dart';
-import 'package:matrix9/QeustionsPage.dart';
+import 'package:matrix9/QeustionsPageIndividual.dart';
 
 class ChooseType extends StatelessWidget {
   const ChooseType({super.key});
