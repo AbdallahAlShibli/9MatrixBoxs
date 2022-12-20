@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 class QuestionModel {
-  int i;
-  int convert;
-  QuestionModel(this.i, this.convert);
+  int qNo;
+  int aNo;
+  QuestionModel(this.qNo, this.aNo);
 }
