@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:matrix9/GradientButtonFb1.dart';
 import 'package:matrix9/QeustionsPageIndividual.dart';
 
+import 'LeadersQPage.dart';
+
 class ChooseType extends StatelessWidget {
   const ChooseType({super.key});
 
@@ -31,7 +33,15 @@ class __ChooseTypeState extends State<_ChooseType> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              GradientButtonFb1(text: "For Leaders", onPressed: (() {})),
+              GradientButtonFb1(
+                  text: "For Leaders",
+                  onPressed: (() {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const QeustionsLeadersPage()),
+                    );
+                  })),
               Text("The employee has reportees",
                   textAlign: TextAlign.left,
                   style: TextStyle(

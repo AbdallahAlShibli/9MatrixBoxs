@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 import 'GradientButtonFb1.dart';
 import 'GradientButtonFbNext.dart';
 import 'IndividualResult.dart';
+import 'LeadersResultPage.dart';
 import 'QuestionModel.dart';
-import 'Questions.dart';
+import 'QuestionsLea.dart';
 
 class QeustionsLeadersPage extends StatelessWidget {
   const QeustionsLeadersPage({Key? key}) : super(key: key);
@@ -23,8 +24,7 @@ class QeustionsLeadersPage extends StatelessWidget {
   }
 }
 
-List<QuestionModel>? dataListG = [];
-List<QuestionModel>? dataList = [];
+List<QuestionModel>? dataListLea = [];
 
 enum ANo { a1, a2, a3, a4, a5 }
 
@@ -38,18 +38,18 @@ class _QeustionsLeadersPage extends StatefulWidget {
 class __QeustionsLeadersPageState extends State<_QeustionsLeadersPage> {
   int counter = 0;
 
-  String theQ = questionsListT1[0].question;
-  String ans1 = questionsListT1[0].answer1;
-  String ans2 = questionsListT1[0].answer2;
-  String ans3 = questionsListT1[0].answer3;
-  String ans4 = questionsListT1[0].answer4;
-  String ans5 = questionsListT1[0].answer5;
+  String theQ = questionsListT1Lea[0].question;
+  String ans1 = questionsListT1Lea[0].answer1;
+  String ans2 = questionsListT1Lea[0].answer2;
+  String ans3 = questionsListT1Lea[0].answer3;
+  String ans4 = questionsListT1Lea[0].answer4;
+  String ans5 = questionsListT1Lea[0].answer5;
   late String q = (counter + 1).toString();
   ANo? aNo = ANo.a1;
 
   @override
   Widget build(BuildContext context) {
-    // dataList!.add(QuestionModel(counter + 1, convert()));
+    // dataListLea!.add(QuestionModel(counter + 1, convert()));
     return Center(
       child: Container(
         alignment: Alignment.center,
@@ -259,14 +259,14 @@ class __QeustionsLeadersPageState extends State<_QeustionsLeadersPage> {
   void updatePage() {
     counter++;
     if (counter <= 9) {
-      dataList!.add(QuestionModel(counter + 1, convert()));
+      dataListLea!.add(QuestionModel(counter + 1, convert()));
       q = (counter + 1).toString();
-      theQ = questionsListT1[counter].question;
-      ans1 = questionsListT1[counter].answer1;
-      ans2 = questionsListT1[counter].answer2;
-      ans3 = questionsListT1[counter].answer3;
-      ans4 = questionsListT1[counter].answer4;
-      ans5 = questionsListT1[counter].answer5;
+      theQ = questionsListT1Lea[counter].question;
+      ans1 = questionsListT1Lea[counter].answer1;
+      ans2 = questionsListT1Lea[counter].answer2;
+      ans3 = questionsListT1Lea[counter].answer3;
+      ans4 = questionsListT1Lea[counter].answer4;
+      ans5 = questionsListT1Lea[counter].answer5;
     }
   }
 
@@ -287,11 +287,11 @@ class __QeustionsLeadersPageState extends State<_QeustionsLeadersPage> {
   }
 
   void getResult() {
-    dataList!.add(QuestionModel(counter + 1, convert()));
+    dataListLea!.add(QuestionModel(counter + 1, convert()));
 
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => const IndividualResult()),
+      MaterialPageRoute(builder: (context) => const LeadersResultPage()),
     );
   }
 
@@ -322,8 +322,8 @@ class __QeustionsLeadersPageState extends State<_QeustionsLeadersPage> {
   // }
 }
 
-class ListClass {
-  List<QuestionModel>? listData() {
-    return dataList;
+class ListLeaClass {
+  List<QuestionModel>? listDataFLea() {
+    return dataListLea;
   }
 }

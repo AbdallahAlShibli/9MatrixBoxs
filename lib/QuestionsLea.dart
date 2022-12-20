@@ -94,7 +94,7 @@ class TheQuestionsT1 {
       this.answer4, this.answer5);
 }
 
-List<TheQuestionsT1> questionsListT1 = [
+List<TheQuestionsT1> questionsListT1Lea = [
   TheQuestionsT1(
       "The employee shows interest to learn new things \nto expand his/her knowledge. Do you agree with that?",
       answersList[0].answer1,
