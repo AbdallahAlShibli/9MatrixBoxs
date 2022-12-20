@@ -10,6 +10,7 @@ class ChooseType extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      color: Colors.white,
       debugShowCheckedModeBanner: false,
       home: _ChooseType(),
     );
@@ -27,7 +28,8 @@ class __ChooseTypeState extends State<_ChooseType> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: EdgeInsets.all(20),
+      color: Colors.white,
+        padding: EdgeInsets.all(5),
         alignment: Alignment.center,
         child: Center(
           child: Column(

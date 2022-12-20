@@ -24,7 +24,8 @@ class More_ extends StatefulWidget {
 class _More_State extends State<More_> {
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return Container(
+      color: Colors.white,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[

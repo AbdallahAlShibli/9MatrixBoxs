@@ -49,8 +49,8 @@ class _MyHomePageState extends State<MyHomePage> {
               padding: EdgeInsets.all(5),
               child: Image(
                 image: AssetImage('images/9_box-bg.png'),
-                width: 400,
-                height: 400,
+                width: 300,
+                height: 300,
               ),
             ),
             Padding(

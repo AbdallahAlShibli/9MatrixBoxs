@@ -13,6 +13,7 @@ class IndividualResult extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      color: Colors.white,
       debugShowCheckedModeBanner: false,
       title: "Individual Result Page",
       home: _IndividualResult(),
@@ -28,7 +29,6 @@ class _IndividualResult extends StatefulWidget {
 }
 
 class __IndividualResultState extends State<_IndividualResult> {
-  
   var resultType = resultLeaData[0].result;
   var resultTypeDesc = resultLeaData[0].ResultText;
   var strategy = resultLeaData[0].Strategy;
@@ -58,13 +58,15 @@ class __IndividualResultState extends State<_IndividualResult> {
     getResults();
 
     return Container(
+        color: Colors.white,
+        padding: EdgeInsets.only(top: 30, right: 10, left: 10),
         alignment: Alignment.topCenter,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             _buildResult(),
             Padding(
-              padding: EdgeInsets.only(top: 15),
+              padding: EdgeInsets.only(top: 10),
               child: Text("Result:",
                   textAlign: TextAlign.left,
                   style: TextStyle(
@@ -112,7 +114,7 @@ class __IndividualResultState extends State<_IndividualResult> {
               child: Container(
                 padding: EdgeInsets.all(10),
                 width: 360,
-                height: 150,
+                height: 120,
                 decoration: BoxDecoration(
                     shape: BoxShape.rectangle, border: Border.all(width: 2)),
                 child: Text(
@@ -128,7 +130,7 @@ class __IndividualResultState extends State<_IndividualResult> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.all(10),
+              padding: EdgeInsets.all(5),
               child: GradientButtonFb1(
                 text: "Fhinish",
                 onPressed: () {
@@ -144,64 +146,60 @@ class __IndividualResultState extends State<_IndividualResult> {
   }
 
   Widget _buildResult() {
-    return Padding(
-      padding: EdgeInsets.all(15),
-      child: Container(
-          padding: EdgeInsets.all(10),
-          width: 415,
-          height: 310,
-          decoration: BoxDecoration(
-              shape: BoxShape.rectangle, border: Border.all(width: 2)),
-          child: Container(
-              child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                Row(children: [
-                  _box("Potential\nGem", Icons.diamond, color1),
-                  _box("High\nPotential", Icons.rocket, color2),
-                  _box("Star", Icons.star, color3)
-                ]),
-                Row(children: [
-                  _box("Inconsistent\nPlayer", Icons.person, color4),
-                  _box("Core\nPlayer", Icons.back_hand, color5),
-                  _box("High\nPerformer", Icons.car_crash, color6)
-                ]),
-                Row(children: [
-                  _box("Risk", Icons.dangerous, color7),
-                  _box("Average\nPerformer", Icons.scale, color8),
-                  _box("Solid\nPerformer", Icons.person, color9)
-                ]),
-              ]))),
-    );
+    return Container(
+        alignment: Alignment.center,
+        width: 500,
+        height: 250,
+        decoration: BoxDecoration(
+            shape: BoxShape.rectangle, border: Border.all(width: 2)),
+        child: Container(
+            child:
+                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Row(children: [
+            _box("Potential\nGem", Icons.diamond, color1),
+            _box("High\nPotential", Icons.rocket, color2),
+            _box("Star", Icons.star, color3)
+          ]),
+          Row(children: [
+            _box("Inconsistent\nPlayer", Icons.person, color4),
+            _box("Core\nPlayer", Icons.back_hand, color5),
+            _box("High\nPerformer", Icons.car_crash, color6)
+          ]),
+          Row(children: [
+            _box("Risk", Icons.dangerous, color7),
+            _box("Average\nPerformer", Icons.scale, color8),
+            _box("Solid\nPerformer", Icons.person, color9)
+          ]),
+        ])));
   }
 
   Widget _box(txt, img, colorr) {
     return Padding(
-        padding: EdgeInsets.all(10),
+        padding: EdgeInsets.all(5),
         child: Container(
-          padding: EdgeInsets.all(10),
-          width: 110,
-          height: 70,
-          decoration: BoxDecoration(
-              color: colorr,
-              shape: BoxShape.rectangle,
-              border: Border.all(width: 0.3),
-              borderRadius: BorderRadius.circular(10)),
-          child: Row(
-            children: [
-              Text(
-                txt,
-                style: TextStyle(
-                    fontSize: 10,
-                    color: Colors.black,
-                    decoration: TextDecoration.none,
-                    letterSpacing: 0.0,
-                    wordSpacing: 2.0),
-              ),
-              Icon(img)
-            ],
-          ),
-        ));
+            alignment: Alignment.center,
+            padding: EdgeInsets.all(2),
+            width: 102,
+            height: 66,
+            decoration: BoxDecoration(
+                color: colorr,
+                shape: BoxShape.rectangle,
+                border: Border.all(width: 0.3),
+                borderRadius: BorderRadius.circular(10)),
+            child: Row(
+              children: [
+                Text(
+                  txt,
+                  style: TextStyle(
+                      fontSize: 10,
+                      color: Colors.black,
+                      decoration: TextDecoration.none,
+                      letterSpacing: 0.0,
+                      wordSpacing: 2.0),
+                ),
+                Icon(img)
+              ],
+            )));
   }
 
   void getResults() {
@@ -218,7 +216,7 @@ class __IndividualResultState extends State<_IndividualResult> {
       print(list[i].aNo);
     }
 
-    if (anReslutP1G42 >= 22 && anReslutP1G43 >= 22) {
+    if ((anReslutP1G42 >= 22) && (anReslutP1G43 >= 22)) {
       color3 = Colors.green[300];
       resultType = resultData[0].result;
       resultTypeDesc = resultData[0].ResultText;
@@ -257,7 +255,7 @@ class __IndividualResultState extends State<_IndividualResult> {
       resultType = resultData[5].result;
       resultTypeDesc = resultData[5].ResultText;
       strategy = resultData[5].Strategy;
-    } else if (anReslutP1G42 < 18 && anReslutP1G43 >= 22) {
+    } else if ((anReslutP1G42 < 18) && anReslutP1G43 >= 22) {
       color9 = Colors.green[300];
       resultType = resultData[6].result;
       resultTypeDesc = resultData[6].ResultText;

@@ -53,14 +53,14 @@ class __QeustionsPageState extends State<_QeustionsPage> {
     return Center(
       child: Container(
         alignment: Alignment.center,
-        padding: EdgeInsets.all(15),
+        padding: EdgeInsets.all(20),
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.all(15),
+              padding: EdgeInsets.only(top: 15),
               child: Container(
                 padding: EdgeInsets.all(10),
-                width: 360,
+                width: 363,
                 height: 150,
                 decoration: BoxDecoration(
                     shape: BoxShape.rectangle, border: Border.all(width: 2)),
@@ -79,14 +79,14 @@ class __QeustionsPageState extends State<_QeustionsPage> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.all(15),
+              padding: EdgeInsets.all(8),
               child: Container(
-                width: 390,
-                height: 60,
+                padding: EdgeInsets.all(2),
+                width: 342,
+                height: 63,
                 decoration: BoxDecoration(
                     shape: BoxShape.rectangle, border: Border.all(width: 1)),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     qTXT(ans1),
                     Radio<ANo>(
@@ -103,10 +103,10 @@ class __QeustionsPageState extends State<_QeustionsPage> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.all(15),
+              padding: EdgeInsets.all(8),
               child: Container(
-                width: 390,
-                height: 60,
+                width: 342,
+                height: 63,
                 decoration: BoxDecoration(
                     shape: BoxShape.rectangle, border: Border.all(width: 1)),
                 child: Row(
@@ -127,10 +127,10 @@ class __QeustionsPageState extends State<_QeustionsPage> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.all(15),
+              padding: EdgeInsets.all(8),
               child: Container(
-                width: 390,
-                height: 60,
+                width: 342,
+                height: 63,
                 decoration: BoxDecoration(
                     shape: BoxShape.rectangle, border: Border.all(width: 1)),
                 child: Row(
@@ -151,10 +151,10 @@ class __QeustionsPageState extends State<_QeustionsPage> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.all(15),
+              padding: EdgeInsets.all(8),
               child: Container(
-                width: 390,
-                height: 60,
+                width: 342,
+                height: 63,
                 decoration: BoxDecoration(
                     shape: BoxShape.rectangle, border: Border.all(width: 1)),
                 child: Row(
@@ -175,10 +175,10 @@ class __QeustionsPageState extends State<_QeustionsPage> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.all(15),
+              padding: EdgeInsets.all(8),
               child: Container(
-                width: 390,
-                height: 60,
+                width: 342,
+                height: 63,
                 decoration: BoxDecoration(
                     shape: BoxShape.rectangle, border: Border.all(width: 1)),
                 child: Row(
@@ -237,16 +237,16 @@ class __QeustionsPageState extends State<_QeustionsPage> {
   Widget qTXT(txt) {
     return Container(
         alignment: Alignment.center,
-        width: 350,
-        height: 70,
-        padding: EdgeInsets.all(5),
+        width: 250,
+        height: 75,
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text(
               txt,
-              maxLines: 2,
+              maxLines: 3,
               style: TextStyle(
-                  fontSize: 13,
+                  fontSize: 11,
                   color: Colors.black,
                   decoration: TextDecoration.none,
                   letterSpacing: 0.0,

@@ -35,10 +35,10 @@ class AnswersT1T2 {
 List<AnswersT1T2> answersListT1T2 = [
   AnswersT1T2(
       "No, the employee has no interest to move up",
-      "It is not clear whether the employee wants \nto move up or not",
+      "It is not clear whether the \nemployee wants to move up or not",
       "Sometimes",
-      "The employee shows interest, but he/she \nrequires the development",
-      "Yes, the employee shows that a lot, and \nhe/she can move up"),
+      "The employee shows interest, \nbut he/she requires the development",
+      "Yes, the employee shows that \na lot, and he/she can move up"),
   AnswersT1T2("Very Low performance", "Low performance", "Achieving targets",
       "Achieving targets", "Exceptional performance"),
   AnswersT1T2("Very Low quality", "Low quality", "Acceptable", "High Quality",
@@ -46,9 +46,9 @@ List<AnswersT1T2> answersListT1T2 = [
   AnswersT1T2(
       "Unable to handle critical tasks",
       "Can do it, but requires supervision",
-      "Can handle some of the critical tasks",
-      "The employee is capable of handling critical tasks",
-      "The employee is highly capable of handling critical \ntasks and can guide other employees as well"),
+      "Can handle some of the \ncritical tasks",
+      "The employee is capable of \nhandling critical tasks",
+      "The employee is highly capable of \n handling critical tasks \n and can guide other employees as well"),
 ];
 
 class TheQuestionsT1 {

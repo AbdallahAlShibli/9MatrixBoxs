@@ -6,6 +6,7 @@ class WhatIs9Matrix extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      color: Colors.white,
       debugShowCheckedModeBanner: false,
       home: _WhatIs9Matrix(),
     );
@@ -23,15 +24,16 @@ class __WhatIs9MatrixState extends State<_WhatIs9Matrix> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Colors.white,
       child: Column(
         children: [
           Image(
             image: AssetImage('images/9_box-bg.png'),
-            width: 400,
-            height: 400,
+            width: 350,
+            height: 350,
           ),
           Padding(
-            padding: EdgeInsets.all(15),
+            padding: EdgeInsets.all(5),
             child: Container(
               padding: EdgeInsets.all(10),
               width: 320,
