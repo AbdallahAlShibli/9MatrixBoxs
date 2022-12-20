@@ -78,8 +78,8 @@ List<AnswersT1T2> answersListT1T2 = [
       "Unable to handle critical tasks",
       "Can do it, but requires supervision",
       "Can handle some of the critical tasks",
-      "The employee is capable of handling critical tasks",
-      "The employee is highly capable of handling critical \ntasks and can guide other employees as well"),
+      "The employee is capable of \nhandling critical tasks",
+      "The employee is highly capable of \n handling critical tasks \n and can guide other employees as well"),
 ];
 
 class TheQuestionsT1 {

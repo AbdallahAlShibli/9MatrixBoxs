@@ -32,7 +32,7 @@ class __AboutToolState extends State<_AboutTool> {
               child: Container(
                 padding: EdgeInsets.all(10),
                 width: 320,
-                height: 350,
+                height: 380,
                 decoration: BoxDecoration(
                     shape: BoxShape.rectangle, border: Border.all(width: 2)),
                 child: Text(
