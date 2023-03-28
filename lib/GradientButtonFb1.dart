@@ -16,12 +16,15 @@ class GradientButtonFb1 extends StatelessWidget {
     const double borderRadius = 15;
 
     return DecoratedBox(
+      
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(borderRadius),
             gradient:
                 const LinearGradient(colors: [primaryColor, secondaryColor])),
         child: ElevatedButton(
+          
           style: ButtonStyle(
+            
               elevation: MaterialStateProperty.all(0),
               alignment: Alignment.center,
               padding: MaterialStateProperty.all(const EdgeInsets.only(

@@ -19,7 +19,7 @@ class AnswersT1T1 {
 
 List<AnswersT1T1> answersList = [
   AnswersT1T1(
-      "Totally Disagree", "Disagree", "Neutral", "Sometimes", "Totally Agree"),
+      "Totally Disagree", "Disagree", "Sometimes", "Agree", "Totally Agree"),
 ];
 
 class AnswersT1T2 {

@@ -45,7 +45,7 @@ class __QeustionsLeadersPageState extends State<_QeustionsLeadersPage> {
   String ans4 = questionsListT1Lea[0].answer4;
   String ans5 = questionsListT1Lea[0].answer5;
   late String q = (counter + 1).toString();
-  ANo? aNo = ANo.a1;
+  ANo? aNo;
 
   @override
   Widget build(BuildContext context) {
@@ -201,24 +201,52 @@ class __QeustionsLeadersPageState extends State<_QeustionsLeadersPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // if (counter > 0) backButton(),
-                Padding(
-                  padding: EdgeInsets.all(30),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      GradientButtonFb1Next(
-                        onPressed: () {
-                          setState(() {
-                            updatePage();
-                          });
-                        },
-                        text: 'Next',
-                        icona: Icon(Icons.skip_next_outlined),
-                      )
-                    ],
-                  ),
-                )
+                if (counter > 0)
+                  Padding(
+                      padding: EdgeInsets.all(10),
+                      child: SizedBox(
+                          width: 100,
+                          height: 40,
+                          child: TextButton(
+                            style: TextButton.styleFrom(
+                              backgroundColor:
+                                  Color.fromARGB(255, 26, 126, 192),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                            ),
+                            onPressed: () {
+                              setState(() {
+                                previousPage();
+                              });
+                            },
+                            child: Text('Previous',
+                                style: const TextStyle(
+                                    color: Colors.white, fontSize: 16)),
+                          ))),
+                if (counter < 9)
+                  Padding(
+                      padding: EdgeInsets.all(10),
+                      child: SizedBox(
+                          width: 100,
+                          height: 40,
+                          child: TextButton(
+                            style: TextButton.styleFrom(
+                              backgroundColor:
+                                  Color.fromARGB(255, 26, 126, 192),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                            ),
+                            onPressed: () {
+                              setState(() {
+                                updatePage();
+                              });
+                            },
+                            child: Text('Next',
+                                style: const TextStyle(
+                                    color: Colors.white, fontSize: 16)),
+                          ))),
               ],
             ),
             if (counter >= 9)
@@ -261,6 +289,20 @@ class __QeustionsLeadersPageState extends State<_QeustionsLeadersPage> {
     if (counter <= 9) {
       dataListLea!.add(QuestionModel(counter + 1, convert()));
       q = (counter + 1).toString();
+      theQ = questionsListT1Lea[counter].question;
+      ans1 = questionsListT1Lea[counter].answer1;
+      ans2 = questionsListT1Lea[counter].answer2;
+      ans3 = questionsListT1Lea[counter].answer3;
+      ans4 = questionsListT1Lea[counter].answer4;
+      ans5 = questionsListT1Lea[counter].answer5;
+    }
+  }
+
+  void previousPage() {
+    counter--;
+    if (counter <= 9) {
+      dataListLea!.remove(QuestionModel(counter+1, convert()));
+      q = (counter+1).toString();
       theQ = questionsListT1Lea[counter].question;
       ans1 = questionsListT1Lea[counter].answer1;
       ans2 = questionsListT1Lea[counter].answer2;

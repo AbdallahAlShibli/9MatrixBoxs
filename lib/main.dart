@@ -54,58 +54,99 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.all(10),
-              child: GradientButtonFb1(
-                text: "Start Assessment",
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const ChooseType()),
-                  );
-                },
-              ),
-            ),
+                padding: EdgeInsets.all(10),
+                child: SizedBox(
+                    width: 280,
+                    height: 40,
+                    child: TextButton(
+                      style: TextButton.styleFrom(
+                        backgroundColor: Color.fromARGB(255, 26, 126, 192),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ChooseType()),
+                        );
+                      },
+                      child: Text('Start Assessment',
+                          style: const TextStyle(
+                              color: Colors.white, fontSize: 16)),
+                    ))),
             Padding(
-              padding: EdgeInsets.all(10),
-              child: GradientButtonFb1(
-                text: "What is 9 Box Matrix?",
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => WhatIs9Matrix()),
-                  );
-                },
-              ),
-            ),
+                padding: EdgeInsets.all(10),
+                child: SizedBox(
+                    width: 280,
+                    height: 40,
+                    child: TextButton(
+                      style: TextButton.styleFrom(
+                        backgroundColor: Color.fromARGB(255, 26, 126, 192),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const WhatIs9Matrix()),
+                        );
+                      },
+                      child: Text('What is 9 Box Matrix?',
+                          style: const TextStyle(
+                              color: Colors.white, fontSize: 16)),
+                    ))),
             Padding(
-              padding: EdgeInsets.all(10),
-              child: GradientButtonFb1(
-                text: "About this tool",
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => AboutTool()),
-                  );
-                },
-              ),
-            ),
+                padding: EdgeInsets.all(10),
+                child: SizedBox(
+                    width: 280,
+                    height: 40,
+                    child: TextButton(
+                      style: TextButton.styleFrom(
+                        backgroundColor: Color.fromARGB(255, 26, 126, 192),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const AboutTool()),
+                        );
+                      },
+                      child: Text('About this tool',
+                          style: const TextStyle(
+                              color: Colors.white, fontSize: 16)),
+                    ))),
             Padding(
-              padding: EdgeInsets.all(10),
-              child: GradientButtonFb1(
-                text: "More",
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => More()),
-                  );
-                },
-              ),
-            ),
+                padding: EdgeInsets.all(10),
+                child: SizedBox(
+                    width: 280,
+                    height: 40,
+                    child: TextButton(
+                      style: TextButton.styleFrom(
+                        backgroundColor: Color.fromARGB(255, 26, 126, 192),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const More()),
+                        );
+                      },
+                      child: Text('More',
+                          style: const TextStyle(
+                              color: Colors.white, fontSize: 16)),
+                    ))),
           ],
         ),
       ),
     );
   }
 }
-
-
